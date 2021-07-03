@@ -1,3 +1,5 @@
+import { useTheme } from '../hooks/useTheme';
+
 import copyImg from '../assets/images/copy.svg';
 import '../styles/room-code.scss';
 
@@ -6,12 +8,14 @@ type RoomCodeProps = {
 }
 
 export function RoomCode(props: RoomCodeProps) {
+  const { theme } = useTheme();
+
   function copyRoomCodeToClipboard() {
       navigator.clipboard.writeText(props.code)
   }
 
   return (
-    <button className="room-code" onClick={copyRoomCodeToClipboard}>
+    <button id="room-code" className={theme} onClick={copyRoomCodeToClipboard}>
       <div>
         <img src={copyImg} alt="Copiar código da sala" />
       </div>

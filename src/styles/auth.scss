@@ -1,11 +1,34 @@
 #page-auth {
   display: flex;
-  align-items: stretch;
   height: 100vh;
+
+  &.dark {
+    background: #333;
+
+    aside {
+      background: #004d40;
+    }
+
+    main h2 {
+      color: #f8f8f8;
+    }
+
+    main button.button {
+      background: #004d40;
+    }
+
+    form input p {
+      color: #a8a8b3
+    }
+
+    .main-content p {
+      color: #a8a8b3
+    }
+  }
 
   aside {
     flex: 7;
-    background: #835afd;
+    background: #4DB6AC;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -32,11 +55,17 @@
 
   main {
     flex: 8;
-    padding: 0 32;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
   }
+
+  .toggle-button {
+    align-items: flex-end;
+    padding: 10px 10px 0 0;
+    align-self: flex-end;
+  } 
 
   .main-content {
     display: flex;
@@ -45,6 +74,8 @@
     max-width: 320px;
     align-items: stretch;
     text-align: center;
+    margin: auto;
+    
 
     > img {
       align-self: center;
@@ -81,7 +112,7 @@
     
 
       a {
-        color: #e559f9;
+        color: #03a9f4;
       }
     }
   }

@@ -1,16 +1,31 @@
-.button {
-  height: 50px;
-  border-radius: 8px;
-  font-weight: 500;
-  background: #835afd;
-  color: #fff;
-  padding: 0 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 0;
-  transition: filter 0.2s;
+div {
+  padding: 0;
+  margin: 0;
+
+  &.dark {
+    .button {
+      background: #004d40;
+
+      &.outlined {
+        border: 1px solid #004d40;
+        color: #004d40;
+      }
+    }    
+  }
+
+  .button {
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 500;
+    background: #4DB6AC;
+    color: #fff;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    transition: filter 0.2s;
 
     img {
       margin-right: 8px;
@@ -18,8 +33,8 @@
 
     &.outlined {
       background: #fff;
-      border: 1px solid #835afd;
-      color: #835afd;
+      border: 1px solid #4DB6AC;
+      color: #4DB6AC;
     }
 
     &:not(:disabled):hover {
@@ -30,5 +45,5 @@
       opacity: 0.6;
       cursor: not-allowed;
     }
+  }
 }
-

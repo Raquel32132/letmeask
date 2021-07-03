@@ -1,19 +1,28 @@
-.room-code {
+#room-code {
   height: 40px;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid #835afd;
+  border: 2px solid #4DB6AC;
   cursor: pointer;
   display: flex;
 
+  &.dark {
+    border: 2px solid #004d40;
+    
+    div {
+      background: #004d40;
+    }
+  }
+
   div {
-    background: #835afd;
+    background: #4DB6AC;
     padding: 0 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    
   }
 
   span {

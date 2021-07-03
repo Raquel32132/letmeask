@@ -1,0 +1,79 @@
+#toggle-button-wrapper {
+    position: relative;
+    width: 74px;
+    height: 34px;
+    margin: auto;
+    border-radius: 40px;
+    
+    input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+
+    span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        opacity: 1;
+        background-color: #4DB6AC;
+        border-radius: 40px;
+        transition: 0.2s ease background-color, 0.2s ease opacity;
+    }
+    
+    //isso mexe no tamanho da bolinha
+    span:before, span:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        transition: 0.5s ease transform, 0.2s ease background-color;
+    }
+
+    span:before {
+        background-color: #4DB6AC;
+        transform: translate(-58px,0px);
+        z-index: 1;
+    }
+
+    //mexe na posição da volta da bolinha
+    span:after {
+        background-color: #fff;
+        transform: translate(4px,-2px);
+        z-index: 0;
+    }
+
+    input:checked + span {
+        background-color: #004d40;
+    }
+
+    input:active + span {
+        opacity: 0.5;
+    }
+
+    input:checked + span:before {
+        background-color: #004d40;
+        transform: translate(36px,-8px);
+    }
+
+    //posição da bolinha na ida, branca
+    input:checked + span:after {
+        background-color: #fff;
+        transform: translate(43px,-2px);
+    }
+
+}
