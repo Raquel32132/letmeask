@@ -24,7 +24,7 @@ This project was developed using the following technologies:
 
 Last features added in this project:
 
-- Toggle Button for Light and Dark theme
+- Toggle Button for Light and Dark themes
 
 
 ## Getting started 📁
